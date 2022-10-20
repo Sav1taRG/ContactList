@@ -14,9 +14,8 @@ class DetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = person.fullName
+        title = person.fullName
         phoneLB.text = "Phone: \(person.phoneNumber)"
         emailLB.text = "Email: \(person.email)"
-        title = person.fullName
     }
 }
