@@ -35,7 +35,7 @@
                             <outlet property="delegate" destination="e7s-fK-7Ny" id="YpH-x9-UnP"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="UVt-fW-Z6x"/>
+                    <tabBarItem key="tabBarItem" selectedImage="person.circle.fill" catalog="system" systemItem="contacts" id="UVt-fW-Z6x"/>
                     <navigationItem key="navigationItem" title="Root View Controller" id="ihi-KF-rD0"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wr8-NM-LuX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -49,14 +49,42 @@
                     <view key="view" contentMode="scaleToFill" id="7NO-vT-HGN">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Rsa-er-gRL">
+                                <rect key="frame" x="16" y="163" width="358" height="52.666666666666657"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szF-Qq-uUc">
+                                        <rect key="frame" x="0.0" y="0.0" width="358" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T53-KH-wh4">
+                                        <rect key="frame" x="0.0" y="32.333333333333343" width="358" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="CXk-dU-T3C"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CXk-dU-T3C" firstAttribute="trailing" secondItem="Rsa-er-gRL" secondAttribute="trailing" constant="16" id="3vV-a2-wjp"/>
+                            <constraint firstItem="Rsa-er-gRL" firstAttribute="top" secondItem="CXk-dU-T3C" secondAttribute="top" constant="20" id="Im1-eY-vgt"/>
+                            <constraint firstItem="Rsa-er-gRL" firstAttribute="leading" secondItem="CXk-dU-T3C" secondAttribute="leading" constant="16" id="lsw-0u-jOl"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0Un-3Y-P15"/>
+                    <connections>
+                        <outlet property="emailLB" destination="T53-KH-wh4" id="tnO-sj-Tdv"/>
+                        <outlet property="phoneLB" destination="szF-Qq-uUc" id="2VC-E0-zgU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yXL-zS-zrw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2935" y="-441"/>
+            <point key="canvasLocation" x="2933.8461538461538" y="-441.46919431279616"/>
         </scene>
         <!--ContactsSectionTableViewController-->
         <scene sceneID="rNO-MQ-gjk">
@@ -81,7 +109,7 @@
                             <outlet property="delegate" destination="B0r-gt-e4Z" id="ayP-ZE-ho5"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="xF9-v5-HDc"/>
+                    <tabBarItem key="tabBarItem" selectedImage="person.2.circle.fill" catalog="system" systemItem="contacts" id="xF9-v5-HDc"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xdn-Bq-QGs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -124,6 +152,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="person.2.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
